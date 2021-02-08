@@ -2,8 +2,10 @@
 
 import '../styles/globals.css';
 
+// eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  return <Component {...pageProps} />;
 }
 
 // Only uncomment this method if you have blocking data requirements for
@@ -18,4 +20,4 @@ function MyApp({ Component, pageProps }) {
 //   return { ...appProps }
 // }
 
-export default MyApp
+export default MyApp;
