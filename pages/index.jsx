@@ -9,7 +9,7 @@ export default function Home() {
       <Head>
         <title>Josprima Sihombing</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#2C2C2C" />
+        <meta name="theme-color" content="#1A1A1A" />
       </Head>
 
       <Navbar />
