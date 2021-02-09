@@ -1,0 +1,121 @@
+%flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar {
+  @extend %flex-row;
+
+  background-color: rgba(44, 44, 44, 0.5);
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #fff;
+  justify-content: space-between;
+  padding: 10px;
+
+  &__menu {
+    @extend %flex-row;
+
+    @media (max-width: 600px)  {
+      display: none;
+    }
+  }
+
+  &__side-menu {
+    width: 250px;
+    background-color: rgba(44, 44, 44, 1);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    left: -450px;
+    transition: left 0.2s ease-in;
+    box-shadow: 10px 5px 20px rgb(53, 53, 53);
+    padding: 20px;
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    &--open {
+      left: 0;
+      transition: left 0.3s ease-in;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    > div {
+      background-color: #fff;
+      width: 25px;
+      height: 3px;
+      position: relative;
+      transition: background-color 0.2s ease-in;
+      border-radius: 2px;
+
+      &:nth-child(1) {
+        margin-bottom: 6px;
+        top: 0;
+        transition: transform 0.2s ease-in, top 0.2s ease-in;
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 6px;
+        transition: opacity 0.2s ease-in;
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+        transition: transform 0.2s ease-in, bottom 0.2s ease-in;
+      }
+    }
+
+    &--close {
+      > div {
+        &:nth-child(1) {
+          transform: rotate(-45deg);
+          top: 9px;
+          transition: transform 0.3s ease-in, top 0.3s ease-in;
+        }
+  
+        &:nth-child(2) {
+          opacity: 0;
+          transition: opacity 0.3s ease-in;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(45deg);
+          transition: transform 0.3s ease-in, bottom 0.3s ease-in;
+          bottom: 9px;
+        }
+      }
+    }
+
+    @media (max-width: 600px)  {
+      display: block;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    margin: 0 10px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    padding: 10px;
+    font-weight: 400;
+
+    &:hover {
+      color: #0085FF;
+    }
+  }
+}
