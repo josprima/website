@@ -24,5 +24,6 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'react/jsx-filename-extension': 'off',
     'react/react-in-jsx-scope': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
   },
 };

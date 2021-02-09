@@ -5,22 +5,16 @@ module.exports = {
     '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
   },
   moduleNameMapper: {
-    '\\.(css|less)$': 'identity-obj-proxy',
+    '\\.(css|less|scss)$': 'identity-obj-proxy',
+    '\\.svg$': '<rootDir>/__mocks__/svgrMock.js',
   },
   collectCoverage: true,
   collectCoverageFrom: [
     '**/pages/*.{js,jsx}',
+    '**/src/components/*.{js,jsx}',
     '!**/node_modules/**',
     '!**/.next/**',
     '!**/coverage/**',
     '!**/public/**',
   ],
-  coverageThreshold: {
-    global: {
-      branches: 90,
-      functions: 90,
-      lines: 90,
-      statements: -10,
-    },
-  },
 };
