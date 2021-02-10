@@ -13,6 +13,7 @@ export default function Home() {
         <title>Josprima Sihombing</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#1A1A1A" />
+        <meta name="description" content="Sekolah calon developer yang pengen jago react." />
       </Head>
 
       <main className={css.main}>
