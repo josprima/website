@@ -50,32 +50,34 @@ const Navbar = () => {
   );
 
   return (
-    <section className={css.navbar}>
-      <Logo />
+    <div className={css.navbar__wrapper}>
+      <section className={css.navbar}>
+        <Logo />
 
-      <ul className={css.navbar__menu}>
-        <LinkItem text="Home" url="/" />
-        <LinkItem text="Alur Belajar" url="/" />
-        <LinkItem text="Akun" url="/" />
-      </ul>
+        <ul className={css.navbar__menu}>
+          <LinkItem text="Home" url="/" />
+          <LinkItem text="Alur Belajar" url="/" />
+          <LinkItem text="Akun" url="/" />
+        </ul>
 
-      <button
-        className={buttonClass}
-        type="button"
-        onClick={() => setIsOpen(!isOpen)}
-        data-testid="button"
-      >
-        <div />
-        <div />
-        <div />
-      </button>
+        <button
+          className={buttonClass}
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          data-testid="button"
+        >
+          <div />
+          <div />
+          <div />
+        </button>
 
-      <ul className={sideMenuClass}>
-        <LinkItem text="Home" url="/" />
-        <LinkItem text="Alur Belajar" url="/" />
-        <LinkItem text="Akun" url="/" />
-      </ul>
-    </section>
+        <ul className={sideMenuClass}>
+          <LinkItem text="Home" url="/" />
+          <LinkItem text="Alur Belajar" url="/" />
+          <LinkItem text="Akun" url="/" />
+        </ul>
+      </section>
+    </div>
   );
 };
 

@@ -10,8 +10,7 @@ module.exports = {
   },
   collectCoverage: true,
   collectCoverageFrom: [
-    '**/pages/*.{js,jsx}',
-    '**/src/components/*.{js,jsx}',
+    '**/src/**/*.{js,jsx}',
     '!**/node_modules/**',
     '!**/.next/**',
     '!**/coverage/**',

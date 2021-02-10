@@ -2,87 +2,91 @@
 
 exports[`renders a message 1`] = `
 <div>
-  <section
-    class="navbar"
+  <div
+    class="navbar__wrapper"
   >
-    <div />
-    <ul
-      class="navbar__menu"
-    >
-      <li
-        class="navbar__item"
-      >
-        <a
-          class="navbar__link"
-          href="/"
-        >
-          Home
-        </a>
-      </li>
-      <li
-        class="navbar__item"
-      >
-        <a
-          class="navbar__link"
-          href="/"
-        >
-          Alur Belajar
-        </a>
-      </li>
-      <li
-        class="navbar__item"
-      >
-        <a
-          class="navbar__link"
-          href="/"
-        >
-          Akun
-        </a>
-      </li>
-    </ul>
-    <button
-      class="navbar__toggle"
-      data-testid="button"
-      type="button"
+    <section
+      class="navbar"
     >
       <div />
-      <div />
-      <div />
-    </button>
-    <ul
-      class="navbar__side-menu"
-    >
-      <li
-        class="navbar__item"
+      <ul
+        class="navbar__menu"
       >
-        <a
-          class="navbar__link"
-          href="/"
+        <li
+          class="navbar__item"
         >
-          Home
-        </a>
-      </li>
-      <li
-        class="navbar__item"
+          <a
+            class="navbar__link"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="navbar__item"
+        >
+          <a
+            class="navbar__link"
+            href="/"
+          >
+            Alur Belajar
+          </a>
+        </li>
+        <li
+          class="navbar__item"
+        >
+          <a
+            class="navbar__link"
+            href="/"
+          >
+            Akun
+          </a>
+        </li>
+      </ul>
+      <button
+        class="navbar__toggle"
+        data-testid="button"
+        type="button"
       >
-        <a
-          class="navbar__link"
-          href="/"
-        >
-          Alur Belajar
-        </a>
-      </li>
-      <li
-        class="navbar__item"
+        <div />
+        <div />
+        <div />
+      </button>
+      <ul
+        class="navbar__side-menu"
       >
-        <a
-          class="navbar__link"
-          href="/"
+        <li
+          class="navbar__item"
         >
-          Akun
-        </a>
-      </li>
-    </ul>
-  </section>
+          <a
+            class="navbar__link"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="navbar__item"
+        >
+          <a
+            class="navbar__link"
+            href="/"
+          >
+            Alur Belajar
+          </a>
+        </li>
+        <li
+          class="navbar__item"
+        >
+          <a
+            class="navbar__link"
+            href="/"
+          >
+            Akun
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
 </div>
 `;
