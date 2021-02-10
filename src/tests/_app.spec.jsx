@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import App from '../../pages/_app';
+import App from '../pages/_app';
 
 const Dummy = () => <h1>Dummy</h1>;
 
