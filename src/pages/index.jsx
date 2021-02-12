@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navbar from '@components/Navbar';
+// import Navbar from '@components/Navbar';
 import { getHomeContent } from '@lib/api';
 
 import css from './index.module.scss';
@@ -18,7 +18,7 @@ export default function Home({ homeContent }) {
       </Head>
 
       <main className={css.main}>
-        <Navbar />
+        {/* <Navbar /> */}
 
         <section className={css.hero}>
           <h1>
