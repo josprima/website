@@ -26,4 +26,15 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
   },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@components', './src/components'],
+          ['@lib', './src/lib'],
+        ],
+        extensions: ['.js', '.jsx'],
+      },
+    },
+  },
 };

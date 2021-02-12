@@ -13,7 +13,6 @@ module.exports = {
 
     return config;
   },
-
   i18n: {
     locales: ['id-ID'],
     defaultLocale: 'id-ID',

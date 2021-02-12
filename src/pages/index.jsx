@@ -1,12 +1,13 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
-import Navbar from '../components/Navbar';
+import Navbar from '@components/Navbar';
+import { getHomeContent } from '@lib/api';
 
 import css from './index.module.scss';
 
-export default function Home() {
+export default function Home({ homeContent }) {
   return (
     <>
       <Head>
@@ -20,11 +21,11 @@ export default function Home() {
         <Navbar />
 
         <section className={css.hero}>
-          <h1>Sekolah calon developer yang pengen jago react.</h1>
+          <h1>
+            {homeContent.title}
+          </h1>
           <p>
-            Belajar react secara terstruktur, dimulai dari hal hal basic yang perlu
-            kamu pahami sebelum masuk ke reactjs. Sehingga fundamental nya lebih kuat.
-            <b> Ayo belajar!</b>
+            {homeContent.description}
           </p>
 
           <section className={css.action}>
@@ -39,4 +40,21 @@ export default function Home() {
       </main>
     </>
   );
+}
+
+Home.propTypes = {
+  homeContent: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+export async function getStaticProps() {
+  const homeContent = (await getHomeContent()) || [];
+
+  return {
+    props: {
+      homeContent,
+    },
+  };
 }
