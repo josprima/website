@@ -30,8 +30,8 @@ module.exports = {
     'import/resolver': {
       alias: {
         map: [
-          ['@components', './src/components'],
-          ['@lib', './src/lib'],
+          ['@/components', './src/components'],
+          ['@/lib', './src/lib'],
         ],
         extensions: ['.js', '.jsx'],
       },
