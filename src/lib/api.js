@@ -1,7 +1,7 @@
 const baseUrl = process.env.API_BASE_URL;
 
 async function fetchAPI(query) {
-  const res = await fetch(`${baseUrl}/graphql`, {
+  const res = await fetch(`${baseUrl}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
