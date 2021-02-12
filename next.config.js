@@ -11,8 +11,6 @@ module.exports = {
       },
     );
 
-    config.resolve.modules.push(__dirname);
-
     return config;
   },
   i18n: {
